@@ -1,23 +1,19 @@
 import 'question.dart';
 
 class SingleChoiceQuestion extends Question{
-  List<String> _answers = new List();
-  String _rightAnswer;
+  String answer;
 
-  SingleChoiceQuestion.withId(int id, String name, String type) : super.withId(id, name, type);
+  SingleChoiceQuestion(String name, String type, List<String> answers) : super(name, type,
+      answers);
 
-  List<String> get answers => _answers;
+  SingleChoiceQuestion.withId(int id, String name, String type, List<String> answers) : super
+    .withId(id, name, type, answers);
 
-  set answers(List<String> value) {
-    _answers = value;
-  }
-
-  String get rightAnswer => _rightAnswer;
+  String get rightAnswer => answer;
 
   set rightAnswer(String value) {
-    _rightAnswer = value;
+    answer = value;
   }
-
 
 }
 
