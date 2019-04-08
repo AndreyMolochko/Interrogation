@@ -4,10 +4,11 @@ abstract class Question{
   int _id;
   String _name;
   String _type;
+  List<String> _answers = new List();
 
-  Question(this._name, this._type);
+  Question(this._name, this._type, this._answers);
 
-  Question.withId(this._id, this._name, this._type);
+  Question.withId(this._id, this._name, this._type, this._answers);
 
   int get id => _id;
 
@@ -27,5 +28,10 @@ abstract class Question{
     _name = value;
   }
 
+  List<String> get answers => _answers;
+
+  set answers(List<String> value) {
+    _answers = value;
+  }
 
 }
