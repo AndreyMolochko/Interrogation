@@ -3,11 +3,11 @@ import 'question.dart';
 class TextQuestion extends Question{
   String _textAnswer;
 
-  TextQuestion(String name, String type, List<String> answers) : super(name, type,
+  TextQuestion(String name, List<String> answers) : super(name,
       answers);
 
-  TextQuestion.withId(int id, String name, String type, List<String> answers) : super
-    .withId(id, name, type, answers);
+  TextQuestion.withId(int id, String name, List<String> answers) : super
+    .withId(id, name, answers);
 
   String get textAnswer => _textAnswer;
 

@@ -3,11 +3,11 @@ import 'question.dart';
 class SingleChoiceQuestion extends Question{
   String answer;
 
-  SingleChoiceQuestion(String name, String type, List<String> answers) : super(name, type,
+  SingleChoiceQuestion(String name, List<String> answers) : super(name,
       answers);
 
-  SingleChoiceQuestion.withId(int id, String name, String type, List<String> answers) : super
-    .withId(id, name, type, answers);
+  SingleChoiceQuestion.withId(int id, String name,  List<String> answers) : super
+    .withId(id, name,  answers);
 
   String get rightAnswer => answer;
 
